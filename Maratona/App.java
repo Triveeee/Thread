@@ -23,29 +23,11 @@ public class App extends JFrame implements Runnable{
         }
 
     }
-    /*
-    public Corsia[] getCorsie(){
-        return corsie;
-        
-    }
-    */
 
     public static void main(String[] args) {
-        /*
-        App app = new App();
-        Corsia corsie[] = app.getCorsie();
-        Thread thread[] = new Thread[5];
-
-        for(int i = 0 ; i < 5 ; i++){
-            thread[i] = new Thread(corsie[i]);
-            thread[i].start();
-        }
-        */
         Thread t1 = new Thread(new App());
         t1.start();
 
-        
-        
     }
 
     @Override
