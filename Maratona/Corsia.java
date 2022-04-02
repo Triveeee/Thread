@@ -6,6 +6,7 @@ import javax.swing.JPanel;
 
 public class Corsia extends JPanel implements Runnable {
 
+    //private int incremento;
     private String nome;
     private int lunghezza;
     private int x;
@@ -13,6 +14,7 @@ public class Corsia extends JPanel implements Runnable {
     private Thread t;
 
     public Corsia(String nome){
+        //this.incremento = (int) (Math.random() * 10 - 1) + 1;
         this.nome = nome;
         lunghezza = 500;
         x = 0;
@@ -38,6 +40,14 @@ public class Corsia extends JPanel implements Runnable {
     public String getNome(){
         return(nome);
     }
+    public void stop(){
+        t.stop();
+    }
+    public void AddX(){
+        int incremento = (int) (Math.random() * 10 - 1) + 1;
+        x = x + incremento;
+    }
+
 
     @Override
     public void run() {
@@ -46,7 +56,7 @@ public class Corsia extends JPanel implements Runnable {
         while(x <= (this.lunghezza - 70)){
             try {
 
-                x = x + 5;
+                AddX();
                 Thread.sleep(100);
                 repaint();
 
