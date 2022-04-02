@@ -57,6 +57,9 @@ public class App extends JFrame implements Runnable{
                 if(corsie[i].getOvalX() >= (500 - 70)){
                     no_exit = false;
                     if(no_exit == false){
+                        for(Corsia l : corsie){
+                            l.stop();
+                        }
                         JOptionPane.showMessageDialog(this, corsie[i].getNome() + " vinto");
                     }
                     break;
