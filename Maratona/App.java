@@ -15,7 +15,8 @@ public class App extends JFrame implements Runnable{
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         Container container = this.getContentPane();
-        container.setLayout(new GridLayout(5 , 0));
+        container.setBackground(Color.black);
+        container.setLayout(new GridLayout(5 , 0 , 2 , 2));
 
         for(int i = 0 ; i < 5 ; i++){
             corsie[i] = new Corsia("Thread[" + i + "]");
