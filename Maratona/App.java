@@ -35,8 +35,7 @@ public class App extends JFrame implements Runnable{
         // TODO Auto-generated method stub
         while(no_exit)
             for(int i = 0 ; i < 5 ; i++){
-                System.out.println(corsie[i].getOvalX());
-                if(corsie[i].getOvalX() >= (500 - 70)){
+                if(corsie[i].getOvalX() >= (500 - 60)){
                     no_exit = false;
                     if(no_exit == false){
                         for(Corsia l : corsie){
